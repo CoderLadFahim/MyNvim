@@ -21,9 +21,9 @@ local themes = {
   Monday = "onedark",
   Tuesday = "angr",
   Wednesday = "nord",
-  Thursday = "tokyonight-storm",
-  Friday = "gruvbox",
-  Saturday = "ayu",
+  Thursday = "gruvbox",
+  Friday = "ayu",
+  Saturday = "tokyonight-night",
 }
 
 local current_day = os.date("%A");

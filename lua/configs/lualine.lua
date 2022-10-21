@@ -4,8 +4,8 @@ local themes = {
   Tuesday = "everforest", -- using a different theme as an angr theme doesn't exist for lualine
   Wednesday = "nord",
   Thursday = "tokyonight",
-  Friday = "gruvbox",
-  Saturday = "ayu",
+  Friday = "ayu",
+  Saturday = "tokyonight",
 }
 
 local current_day = os.date("%A");
