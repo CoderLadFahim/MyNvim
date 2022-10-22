@@ -105,19 +105,19 @@ if is_available "smart-splits.nvim" then
   maps.n["<leader>ll"] = { function() require("smart-splits").move_cursor_right() end, desc = "Move to right split" }
 
   -- Resize with arrows
-  maps.n["<C-Up>"] = { function() require("smart-splits").resize_up() end, desc = "Resize split up" }
-  maps.n["<C-Down>"] = { function() require("smart-splits").resize_down() end, desc = "Resize split down" }
-  maps.n["<C-Left>"] = { function() require("smart-splits").resize_left() end, desc = "Resize split left" }
-  maps.n["<C-Right>"] = { function() require("smart-splits").resize_right() end, desc = "Resize split right" }
+  maps.n["<C-h>"] = { function() require("smart-splits").resize_left() end, desc = "Resize split left" }
+  maps.n["<C-j>"] = { function() require("smart-splits").resize_down() end, desc = "Resize split down" }
+  maps.n["<C-k>"] = { function() require("smart-splits").resize_up() end, desc = "Resize split up" }
+  maps.n["<C-l>"] = { function() require("smart-splits").resize_right() end, desc = "Resize split right" }
 else
   maps.n["<leader>hh"] = { "<C-w>h", desc = "Move to left split" }
   maps.n["<leader>jj"] = { "<C-w>j", desc = "Move to below split" }
   maps.n["<leader>kk"] = { "<C-w>k", desc = "Move to above split" }
   maps.n["<leader>kk"] = { "<C-w>l", desc = "Move to right split" }
-  maps.n["<C-Up>"] = { "<cmd>resize -2<CR>", desc = "Resize split up" }
-  maps.n["<C-Down>"] = { "<cmd>resize +2<CR>", desc = "Resize split down" }
-  maps.n["<C-Left>"] = { "<cmd>vertical resize -2<CR>", desc = "Resize split left" }
-  maps.n["<C-Right>"] = { "<cmd>vertical resize +2<CR>", desc = "Resize split right" }
+  maps.n["<C-h>"] = { "<cmd>vertical resize -2<CR>", desc = "Resize split left" }
+  maps.n["<C-j>"] = { "<cmd>resize +2<CR>", desc = "Resize split down" }
+  maps.n["<C-k>"] = { "<cmd>resize -2<CR>", desc = "Resize split up" }
+  maps.n["<C-l>"] = { "<cmd>vertical resize +2<CR>", desc = "Resize split right" }
 end
 
 -- SymbolsOutline
@@ -192,7 +192,7 @@ maps.v["<"] = { "<gv", desc = "unindent line" }
 maps.v[">"] = { ">gv", desc = "indent line" }
 
 -- Improved Terminal Mappings
-maps.t["<esc>"] = { "<C-\\><C-n>", desc = "Terminal normal mode" }
+maps.t["<leader>,,"] = { "<C-\\><C-n>", desc = "Terminal normal mode" }
 maps.t["<C-h>"] = { "<c-\\><c-n><c-w>h", desc = "Terminal left window navigation" }
 maps.t["<C-j>"] = { "<c-\\><c-n><c-w>j", desc = "Terminal down window navigation" }
 maps.t["<C-k>"] = { "<c-\\><c-n><c-w>k", desc = "Terminal up window navigation" }
