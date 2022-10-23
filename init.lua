@@ -28,3 +28,9 @@ local themes = {
 
 local current_day = os.date("%A");
 vim.api.nvim_command("colorscheme " .. themes[current_day]);
+
+vim.api.nvim_command("highlight Normal guibg=none");
+vim.api.nvim_command("highlight NonText guibg=none");
+
+vim.api.nvim_command("au ColorScheme * hi Normal ctermbg=none guibg=non");
+vim.api.nvim_command("au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red");
