@@ -60,7 +60,7 @@ local astro_plugins = {
   -- Bufferline
   ["akinsho/bufferline.nvim"] = {
     after = "nvim-web-devicons", 
-    disable = true,
+    disable = false,
     config = function() require "configs.bufferline" end,
   },
 

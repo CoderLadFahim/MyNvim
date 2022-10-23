@@ -27,6 +27,11 @@ maps.n["<leader>pc"] = { "<cmd>PackerClean<cr>", desc = "Packer Clean" }
 maps.n["<leader>pi"] = { "<cmd>PackerInstall<cr>", desc = "Packer Install" }
 maps.n["<leader>ps"] = { "<cmd>PackerSync<cr>", desc = "Packer Sync" }
 
+
+maps.n["L"] = { "<cmd>bnext<cr>", desc = "Next buffer" }
+maps.n["H"] = { "<cmd>bprevious<cr>", desc = "Previous buffer" }
+maps.n["<leader>bd"] = { "<cmd>bd<cr>", desc = "Close current buffer" }
+
 -- Alpha
 if is_available "alpha-nvim" then maps.n["<leader>d"] = { "<cmd>Alpha<cr>", desc = "Alpha Dashboard" } end
 
@@ -105,19 +110,20 @@ if is_available "smart-splits.nvim" then
   maps.n["<leader>ll"] = { function() require("smart-splits").move_cursor_right() end, desc = "Move to right split" }
 
   -- Resize with arrows
-  maps.n["<C-h>"] = { function() require("smart-splits").resize_left() end, desc = "Resize split left" }
-  maps.n["<C-j>"] = { function() require("smart-splits").resize_down() end, desc = "Resize split down" }
-  maps.n["<C-k>"] = { function() require("smart-splits").resize_up() end, desc = "Resize split up" }
-  maps.n["<C-l>"] = { function() require("smart-splits").resize_right() end, desc = "Resize split right" }
+  maps.n["<leader>HH"] = { function() require("smart-splits").resize_left() end, desc = "Resize split left" }
+  maps.n["<leader>JJ"] = { function() require("smart-splits").resize_down() end, desc = "Resize split down" }
+  maps.n["<leader>KK"] = { function() require("smart-splits").resize_up() end, desc = "Resize split up" }
+  maps.n["<leader>LL"] = { function() require("smart-splits").resize_right() end, desc = "Resize split right" }
 else
   maps.n["<leader>hh"] = { "<C-w>h", desc = "Move to left split" }
   maps.n["<leader>jj"] = { "<C-w>j", desc = "Move to below split" }
   maps.n["<leader>kk"] = { "<C-w>k", desc = "Move to above split" }
   maps.n["<leader>kk"] = { "<C-w>l", desc = "Move to right split" }
-  maps.n["<C-h>"] = { "<cmd>vertical resize -2<CR>", desc = "Resize split left" }
-  maps.n["<C-j>"] = { "<cmd>resize +2<CR>", desc = "Resize split down" }
-  maps.n["<C-k>"] = { "<cmd>resize -2<CR>", desc = "Resize split up" }
-  maps.n["<C-l>"] = { "<cmd>vertical resize +2<CR>", desc = "Resize split right" }
+
+  maps.n["<leader>HH"] = { "<cmd>vertical resize -2<CR>", desc = "Resize split left" }
+  maps.n["<leader>JJ"] = { "<cmd>resize +2<CR>", desc = "Resize split down" }
+  maps.n["<leader>KK"] = { "<cmd>resize -2<CR>", desc = "Resize split up" }
+  maps.n["<leader>LL"] = { "<cmd>vertical resize +2<CR>", desc = "Resize split right" }
 end
 
 -- SymbolsOutline
