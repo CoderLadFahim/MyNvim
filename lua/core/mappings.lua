@@ -199,6 +199,7 @@ maps.v["<"] = { "<gv", desc = "unindent line" }
 maps.v[">"] = { ">gv", desc = "indent line" }
 
 -- Improved Terminal Mappings
+maps.n["<leader>tt"] = { ":ToggleTerm<cr>", desc = "Toggle terminal" }
 maps.t["<leader>,,"] = { "<C-\\><C-n>", desc = "Terminal normal mode" }
 maps.t["<C-h>"] = { "<c-\\><c-n><c-w>h", desc = "Terminal left window navigation" }
 maps.t["<C-j>"] = { "<c-\\><c-n><c-w>j", desc = "Terminal down window navigation" }
