@@ -13,7 +13,8 @@ local current_day = os.date("%A");
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = themes[current_day],
+    -- theme = themes[current_day],
+    theme = 'gruvbox',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
