@@ -81,15 +81,16 @@ if is_available "neo-tree.nvim" then
   maps.n["<leader>tf"] = { "<cmd>Neotree focus<cr>", desc = "Focus Explorer" }
 end
 
--- -- Session Manager
--- if is_available "neovim-session-manager" then
---   maps.n["<leader>Sl"] = { "<cmd>SessionManager! load_last_session<cr>", desc = "Load last session" }
---   maps.n["<leader>Ss"] = { "<cmd>SessionManager! save_current_session<cr>", desc = "Save this session" }
---   maps.n["<leader>Sd"] = { "<cmd>SessionManager! delete_session<cr>", desc = "Delete session" }
---   maps.n["<leader>Sf"] = { "<cmd>SessionManager! load_session<cr>", desc = "Search sessions" }
---   maps.n["<leader>S."] =
---     { "<cmd>SessionManager! load_current_dir_session<cr>", desc = "Load current directory session" }
--- end
+-- Session Manager
+if is_available "neovim-session-manager" then
+  maps.n["<leader>Sl"] = { "<cmd>SessionManager! load_last_session<cr>", desc = "Load last session" }
+  maps.n["<leader>Ss"] = { "<cmd>SessionManager! save_current_session<cr>", desc = "Save this session" }
+  maps.n["<leader>ss"] = { "<cmd>SessionManager! load_session<cr>", desc = "Save this session" }
+  maps.n["<leader>Sd"] = { "<cmd>SessionManager! delete_session<cr>", desc = "Delete session" }
+  maps.n["<leader>Sf"] = { "<cmd>SessionManager! load_session<cr>", desc = "Search sessions" }
+  maps.n["<leader>S."] =
+    { "<cmd>SessionManager! load_current_dir_session<cr>", desc = "Load current directory session" }
+end
 
 -- Package Manager
 -- TODO: v2 rework these key bindings to be more general
@@ -178,7 +179,7 @@ if is_available "telescope.nvim" then
   maps.n["<leader>lR"] = { function() require("telescope.builtin").lsp_references() end, desc = "Search references" }
   maps.n["<leader>lD"] = { function() require("telescope.builtin").diagnostics() end, desc = "Search diagnostics" }
 
-  maps.n["<leader>$$"] = { "<cmd>Prettier<cr>", desc = "Format file" }
+  -- maps.n["<leader>$$"] = { "<cmd>Prettier<cr>", desc = "Format file" }
 end
 
 -- Terminal

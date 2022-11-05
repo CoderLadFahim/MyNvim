@@ -31,7 +31,7 @@ require("prettier").setup({
      quote_props = "as-needed",
      semi = true,
      single_attribute_per_line = false,
-     single_quote = false,
+     single_quote = true,
      tab_width = 3,
      trailing_comma = "es5",
      config_precedence = "file-override",

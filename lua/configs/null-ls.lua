@@ -10,7 +10,7 @@ null_ls.setup({
     --   vim.cmd("nnoremap <silent><buffer> <Leader>$$ :lua vim.lsp.buf.formatting_seq_sync()<CR>")
     --   --
     --   -- format on save
-    --   -- vim.cmd("autocmd BufWritePost <buffer> lua vim.lsp.buf.formatting_seq_sync()")
+    vim.cmd("autocmd BufWritePost <buffer> Prettier")
     -- end
     --
     -- if client.server_capabilities.documentRangeFormattingProvider then
